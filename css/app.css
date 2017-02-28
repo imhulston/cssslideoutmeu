@@ -1,0 +1,83 @@
+body {
+    font: 1.2em 'Noto Sans' sans-serif;
+    line-height: 1.7;
+    font-weight: 200;
+    background-image: url("../images/heart_food.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+div.transbox {
+    margin: 100px;
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    position: absolute;
+    top: 0px;
+}            /* The two css styles conrtibute to putting the partially transparent 
+                background behind the text*/
+
+div.transbox p {
+    margin: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+h1 {
+    font: 1.5em 'Noto Sans' sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapper {
+    margin-left: 80px;
+    margin-right: 30px;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.nav-side {
+    position: fixed;
+    left: 0px; /*CHANGES THE WIDTH OF THE SLIDEOUT NAV*/
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    background-color: #965251;
+    box-sizing: border-box;
+    padding: 20px;
+    color: white;
+    margin-left: -250px;
+    transition: margin 400ms ease-in-out;
+    z-index: 2;
+}
+
+.nav-side.nav-open {
+    margin-left: 0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.nav-toggle {
+    position: absolute;
+    right: -75px; /*changes the width of the slide out tab*/
+    top: 0px;
+    width: 100px; /* have to change the width to change the position right above */
+    height: 100px;
+    background-color: #965251;
+    line-height: 100px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 0 3px rgba(0,0,0, .1);
+}
+
+.nav-toggle:before {
+    content: "\2192";
+    font-weight: 600px;
+    color: white;
+}
+
+.nav-side.nav-open .nav-toggle:before {
+    content: "\2190";
+}
